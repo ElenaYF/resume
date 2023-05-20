@@ -1,0 +1,128 @@
+
+
+<div>
+   
+     <div><h1>{{name}}</h1></div>
+     <br>
+     <hr>
+
+     <div><i>Birth</i><br><br>  {{birthdate}} </div>
+     <br>
+
+     <div><em>{{birthplace}}</em></div>
+     <br>
+     <hr>
+
+     <div><i>Death</i><br><br>{{deathdate}}</div>
+     <br>
+
+     <div><em>{{deathplace}}</em></div>
+     <br>
+     <hr>
+
+     <div><i>Nationality:</i> {{nationality}}</div>
+     <br>
+
+     <div><b>{{occupation}}</b></div>
+     <br>
+
+    <div><p>{{known_for}}</p></div>  
+    <br>
+       
+     <div><strong>Education</strong></div>  
+                  <div>
+                     <ul>
+                        {{#each education}}
+                        <li>
+                           <div>{{degree}}</div>
+                           <div>{{field}}</div>
+                           <div>{{institution}}</div>
+                           <div>{{year}}</div>
+                        </li>
+                        {{/each}}
+                     </ul>
+                  </div>
+                  <br>
+                  <br>
+
+      <div><strong>Publications:</strong></div>  
+       <div>           
+        {{#each notable_publications}}
+        <div>
+             <div>{{title}}, {{year}} /{{publisher}}/</div>
+        </div>
+        {{/each}}
+      <div/>
+       <br>
+       <br>                                        
+                       
+       <div><strong>Partners:</strong></div>  
+       <div>           
+                     {{#each partners}}
+        <div>
+             <div><em>{{name}}</em>, {{relationship}} /{{years}}/</div>
+        </div>
+        {{/each}}
+      <div/>
+       <br>
+       <br>                   
+                       
+        <div><strong>Awards:</strong></div>
+        <div>
+         {{#each awards}}
+        <div>{{title}} ({{year}}) - {{description}}.</div> 
+        {{/each}}
+        </div>
+        <br>
+        <br>
+
+        <div><strong>Influences:</strong></div>  
+            <div>
+               <p>'Isaac Newton',</p>
+               <p>'James Clerk Maxwell',</p>
+               <p>'Hermann Minkowski'.</p>
+            </div>
+            <br>
+            <br>            
+
+         <div><strong>Influenced:</strong></div>  
+            <div>
+               <p>'Niels Bohr',</p>
+               <p>'Erwin Schrödinger',</p>
+               <p>'Werner Heisenberg',</p>
+               <p>'Richard Feynman'.</p>
+            </div>
+            <br>
+            <br>     
+                        
+          <div><strong>Quotes:</strong></div>  
+            <div>
+               <q> 'Imagination is more important than knowledge.',</q><br>
+               <q>'I have no special talent. I am only passionately curious.',</q><br>
+               <q>'The important thing is not to stop questioning.',</q><br>
+               <q>'The most beautiful thing we can experience is the mysterious. It is the source of all true art and all science.'.</q><br><br>
+            </div>
+            <br>
+            <br>                                 
+
+        <div><strong>Major discoveries:</strong></div>
+        <div>
+         {{#each major_discoveries}}
+        <div>{{title}} ({{year}}) - {{description}}.</div> 
+        {{/each}}
+        </div>
+        <br>
+        <br>
+        
+        <div><strong>Contributions:</strong></div>
+        
+         {{#with  contributions}}
+        <div>{{title}}</div>
+        <div><p>{{description}}</p></div> 
+        <div>{{year}}</div> 
+        <div>{{field}}</div>
+        {{/with}}
+        <br>
+        <hr> 
+        <hr>                  
+  </div>
