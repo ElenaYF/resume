@@ -1,0 +1,81 @@
+
+
+<div>
+       {{#with persons}}
+     <div><h1>{{name}}</h1></div>
+     <br>
+     <hr>
+
+     <div>{{age}}, {{gender}}</div>
+     <br>
+
+     <div><address>{{address.street}}, {{address.city}}, {{address.state}}, {{address.country}}, {{address.zip}}</address></div>                               
+     <br>
+     <hr>                  
+                     
+        <div>{{> title data="Person page" person=true}}</div>
+        <br>
+
+            <div><strong>Education</strong></div>  
+                  <div>
+                     <ul>
+                        {{#each education}}
+                        <li>
+                           <div>{{degree}}</div>
+                           <div>{{major}}</div>
+                           <div>{{university}}</div>
+                           <div>{{graduationYear}}</div>
+                        </li>
+                        {{/each}}
+                     </ul>
+                  </div>
+                  <br>
+                  <br>
+                          
+            <div><strong>Work experience</strong></div>
+                   <div>
+                      <ul>
+                        {{#each workExperience}}
+                        <li>
+                           <div>{{company}}</div>
+                           <div>{{title}}</div>
+                           <div>{{startDate}} - {{endDate}}</div>
+                           <div>{{responsibilities}}<p><em>Responsibilities:</em><small>'Developed new features for Google Maps', 'Worked on improving search algorithms.'</small></p></div>
+                           <div>{{year_founded}}</div>
+                           <div>{{industry}}</div>
+                           <br>
+                              
+                              <div><em>Employees:</em></div>
+                                 <div>
+                                    <ul>
+                                    {{#each employees}}
+                                       <li>
+                                       <div>{{name}}</div>
+                                       <div>{{position}}</div>
+                                       <div>{{department}}</div>
+                                       <br>
+                                             
+                                          <div><em>Project:</em></div>
+                                                <div>
+                                                   <ul>
+                                                   {{#each projects}}
+                                                      <li>
+                                                         <div>{{name}}</div>
+                                                         <div><p>{{description}}</p></div>
+                                                         <div>{{status}}</div>
+                                                      </li>
+                                                   {{/each}}
+                                                   </ul>
+                                                </div>
+                                       </li>
+                                     {{/each}}
+                                     </ul>
+                                 </div>
+                         </li>
+                         {{/each}}
+                       </ul>
+                   </div>
+                   <br>
+                   <br>                      
+      {{/with}}
+ </div>
