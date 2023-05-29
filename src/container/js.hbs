@@ -10,15 +10,27 @@
       <hr>
       <br>
 
-      <div><b>Types:</b></div>
+      {{!-- <div><b>Types:</b></div>
       <ul>
       {{#each types}}
       <li>{{this}}</li>
       {{/each}}
       </ul>
       <br>
+       <hr> --}}
+
+        <div><b>Types:</b></div>
+      <ul>
+      {{#each types}}
+       <button type="button" class="btn btn-primary">
+  <span class="badge text-bg-secondary">{{this}}</span>
+</button>
+      {{/each}}
+      </ul>
+      <br>
        <hr>
 
+      
       <div><b>Syntax:</b></div>
       {{#with syntax}}
       <ul>
@@ -34,25 +46,50 @@
       <div><b>Features:</b></div>
       <ul>
       {{#each features}}
-      <li>{{this}}</li>
+      <button type="button" class="btn btn-primary">
+  <span class="badge text-bg-secondary">{{this}}</span>
+</button>
       {{/each}}
       </ul>
       <br>
       <hr>
 
-      <div><b>Libraries:</b></div>
+      {{!-- <div><b>Libraries:</b></div>
       <ul>
       {{#each libraries}}
       <li>{{this}}</li>
       {{/each}}
       </ul>
       <br>
+      <hr> --}}
+
+      <div><b>Libraries:</b></div>
+      <ul>
+      {{#each libraries}}
+       <button type="button" class="btn btn-primary">
+  <span class="badge text-bg-secondary">{{this}}</span>
+</button>
+      {{/each}}
+      </ul>
+      <br>
       <hr>
 
-      <div><b>Tools:</b></div>
-      <ul>
-      {{#each tools}}
+      {{!-- <div><b>Tools:</b></div>
+       <ul>
+      {{#each tools}} 
       <li>{{this}}</li>
+      {{/each}}
+      </ul>
+      <br>
+      <hr> --}}
+
+     
+     <div><b>Tools:</b></div>
+      <ul>
+      {{#each tools}} 
+       <button type="button" class="btn btn-primary">
+  <span class="badge text-bg-secondary">{{this}}</span>
+</button>
       {{/each}}
       </ul>
       <br>
@@ -61,7 +98,8 @@
       <div><b>Community:</b></div>
       <ul>
       {{#each community}}
-      <li>{{name}} ({{type}})</li>
+      <li>{{name}}</li>
+      <button type="button" class="btn btn-primary">{{type}}</button>
       {{/each}}
       </ul>
       <br>
