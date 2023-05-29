@@ -1,9 +1,67 @@
 <div>
    <section>
+      
       {{#each web.languages}}
-         <div><h3><u>{{name}}</u></h3> {{version}}, 
-         <p></p>{{description}}
+      <br>
+      <hr>
+         <div><h3><u>{{name}}</u></h3> <em>/{{version}}/</em> 
+         <p>{{description}}</p>
          </div>
-      {{/each }}
+         <hr>
+         <hr>
+         <br>
+
+          
+         {{#each elements}} 
+         <div><em><b>Element:</em></b></div>
+         <br>
+         <div><b>"{{name}}":</b> {{description}}</div>
+         <br>
+
+            <ul>{{#each attributes}}
+             <div><em><b>Attribute:</em></b></div>
+             <br>
+             
+              <li><div>"{{name}}":  {{description}}</div></li>
+              
+              <br>
+            {{/each}}</ul>
+            <br>
+         {{/each}}
+
+          
+         {{#each properties}}
+         <em><b>Properties:</em></b>
+         <br>
+         <div><p><b>{{name}}</b>  /{{description}}/</p></div>
+
+             <ul>{{#each values}}
+              
+              <li><div> "{{value}}":  {{description}}</div></li>
+              
+             {{/each}}</ul>
+             <br>
+
+         {{/each}}
+         
+
+        {{#each functions}}
+            <div><em><b>Functions:</em></b></div>
+            <br>
+           <div><em><u>{{name}}</u></em></div> <p>{{description}}</p>
+           <br>
+
+           <ul>
+            {{#each parameters}}
+           <div><em><b>Parameters:</em></b></div>
+           <li><p>"{{name}}" {{type}} {{description}}</p></li>
+          
+           {{/each}}
+           </ul>
+           <br>
+         {{/each}}
+        
+      {{/each}}
+      <hr>
    </section>
 </div>
