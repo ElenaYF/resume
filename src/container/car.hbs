@@ -1,0 +1,321 @@
+<div>
+   <section>
+      <div><strong><u>{{make}}</u> {{model}}</strong> ({{year}}, {{color}})</div>
+      {{#with features}}
+      <hr>
+      <hr>
+      <br>
+         <div><em><b>Interior</b></em></div>
+         <hr>
+          <br>
+        
+         
+            <br>
+
+
+         {{#with interior.seats}}
+          <div><b>Seats:</b>
+          <br>
+          <br>
+               material: <button type="button" class="btn btn-primary">
+                 <span class="badge text-bg-secondary">{{material}}</span>
+               </button> <br><br>
+
+              color: <button type="button" class="btn btn-primary">
+               <span class="badge text-bg-secondary">{{color}}</span>
+               </button> <br><br>
+                              
+               <button type="button" class="btn btn-primary">
+               <span class="badge text-bg-secondary">{{#if heated includeZero=true}} heated {{/if}}</span>
+               </button> 
+
+               <button type="button" class="btn btn-primary">
+               <span class="badge text-bg-secondary">{{#if ventilated includeZero=true}} ventilated {{/if}}</span>
+               </button>
+          </div>
+         {{/with}}
+         <br>
+
+         {{#with interior.dashboard}}
+           <div><b>Dashboard:</b>
+           <br>
+           <br>
+
+           <button type="button" class="btn btn-primary">
+             <span class="badge text-bg-secondary">{{material}}</span>
+           </button>
+           
+           <button type="button" class="btn btn-primary">
+             <span class="badge text-bg-secondary">{{color}}</span>
+           </button>
+           <br>
+            <ul>
+            {{#with display}}
+             <div><b>Display:</b>
+            <br>
+            <br>
+               <button type="button" class="btn btn-primary">
+                 type <span class="baDge text-bg-secondary">{{type}}</span>
+               </button>
+
+               <button type="button" class="btn btn-primary">
+                  size <span class="badge text-bg-secondary">{{size}}</span>
+               </button>
+
+               <button type="button" class="btn btn-primary">
+                 resolution <span class="badge text-bg-secondary">{{resolution}}</span>
+               </button>
+
+                <button type="button" class="btn btn-primary">
+                 <span class="badge text-bg-secondary">{{#if touchscreen includeZero=true}} touchscreen {{/if}}</span>
+               </button>
+               
+            </div>
+            <br>
+            {{/with}}
+            </ul>
+            </div>
+            <br>
+         {{/with}}
+
+
+         {{#with interior.audio}}
+          <div><b>Audio:</b>
+          <br>
+          <br>
+               <button type="button" class="btn btn-primary">
+               <span class="badge text-bg-secondary">{{system}}</span>
+               </button>
+
+               <button type="button" class="btn btn-primary">
+               speakers: <span class="badge text-bg-secondary">{{speakers}}</span>
+               </button>
+                              
+               <button type="button" class="btn btn-primary">
+               <span class="badge text-bg-secondary">{{#if subwoofer includeZero=true}} subwoofer{{/if}}</span>
+               </button>
+
+               <button type="button" class="btn btn-primary">
+               <span class="badge text-bg-secondary">{{#if bluetooth includeZero=true}}  bluetooth {{/if}}</span>
+               </button>
+
+               <button type="button" class="btn btn-primary">
+               <span class="badge text-bg-secondary">{{#if USB includeZero=true}} USB {{/if}}</span>
+               </button>
+          </div>
+         {{/with}}
+         <br>
+         <hr>
+
+     
+         <div><em><b>Exterior</b></em></div>
+         <hr>
+          <br>
+       
+         {{#with exterior.wheels}}
+          <div><b>Wheels:</b>
+          <br>
+          <br>
+         <button type="button" class="btn btn-primary">
+           size: <span class="badge text-bg-secondary">{{size}}</span>
+         </button>
+
+         <button type="button" class="btn btn-primary">
+               <span class="badge text-bg-secondary">{{type}}</span>
+         </button>
+
+         <button type="button" class="btn btn-primary">
+               <span class="badge text-bg-secondary">{{color}}</span>
+         </button>
+
+          </div>
+          <br>
+          <br>
+          {{/with}}
+
+          
+          {{#with exterior.headlights}}
+          <div><b>Headlights:</b>
+          <br>
+          <br>
+          type: <button type="button" class="btn btn-primary">
+           <span class="badge text-bg-secondary">{{type}}</span>
+         </button> <br> <br>
+
+          brightness: <button type="button" class="btn btn-primary">
+           <span class="badge text-bg-secondary">{{brightness}}</span>
+         </button> <br> <br>
+
+         <button type="button" class="btn btn-primary">
+                 <span class="badge text-bg-secondary">{{#if automatic includeZero=true}} automatic {{/if}}</span>
+         </button>
+         </div>
+          {{/with}}
+          <br>
+          <br>
+
+          
+          {{#with exterior.sunroof}}
+          <div><b>Sunroof:</b>
+          <br>
+          <br>
+          type: <button type="button" class="btn btn-primary">
+           <span class="badge text-bg-secondary">{{type}}</span>
+         </button> <br> <br>
+
+          size: <button type="button" class="btn btn-primary">
+           <span class="badge text-bg-secondary">{{size}}</span>
+         </button> <br> <br>
+
+         <button type="button" class="btn btn-primary">
+                 <span class="badge text-bg-secondary">{{#if automatic includeZero=true}} automatic {{/if}}</span>
+         </button>
+         </div>
+          {{/with}}
+          <br>
+          <hr>
+
+           <div><em><b>Safety</b></em></div>
+         <hr>
+          <br>
+
+           {{#with safety.airbags}}
+          <div><b>Airbags:</b>
+          <br>
+          <br>
+          front: <button type="button" class="btn btn-primary">
+           <span class="badge text-bg-secondary">{{front}}</span>
+         </button> <br> <br>
+
+          side: <button type="button" class="btn btn-primary">
+           <span class="badge text-bg-secondary">{{side}}</span>
+         </button> <br> <br>
+
+         knee: <button type="button" class="btn btn-primary">
+           <span class="badge text-bg-secondary">{{knee}}</span>
+         </button> <br> <br>
+
+         rear: <button type="button" class="btn btn-primary">
+           <span class="badge text-bg-secondary">{{rear}}</span>
+         </button> <br> <br>
+         </div>
+          {{/with}}
+          <br>
+          <br>
+
+           {{#with safety.assistance}}
+          <div><b>Assistance:</b>
+          <br>
+          <br>
+
+          <button type="button" class="btn btn-primary">
+                 <span class="badge text-bg-secondary">{{#if blind_spot_monitoring includeZero=true}}  blind_spot_monitoring {{/if}}</span>
+         </button>
+         
+         <button type="button" class="btn btn-primary">
+                 <span class="badge text-bg-secondary">{{#if rear_cross_traffic_alert includeZero=true}} rear_cross_traffic_alert {{/if}}</span>
+         </button>
+
+         <button type="button" class="btn btn-primary">
+                 <span class="badge text-bg-secondary">{{#if lane_departure_warning includeZero=true}} lane_departure_warning {{/if}}</span>
+         </button>
+
+         <button type="button" class="btn btn-primary">
+                 <span class="badge text-bg-secondary">{{#if adaptive_cruise_control includeZero=true}} adaptive_cruise_control {{/if}}</span>
+         </button>
+
+         <button type="button" class="btn btn-primary">
+                 <span class="badge text-bg-secondary">{{#if collision_warning includeZero=true}} collision_warning {{/if}}</span>
+         </button>
+         </div>
+          {{/with}}
+          <br>
+          <hr>
+
+      {{/with}}
+
+
+
+      <div><em><b>Engine</b></em></div>
+         <hr>
+          <br>
+           {{#with engine}}
+          
+               type: <button type="button" class="btn btn-primary">
+               <span class="badge text-bg-secondary">{{type}}</span>
+               </button> <br> <br>
+
+               displacement: <button type="button" class="btn btn-primary">
+               <span class="badge text-bg-secondary">{{displacement}}</span>
+               </button> <br> <br>
+
+               torque: <button type="button" class="btn btn-primary">
+               <span class="badge text-bg-secondary">{{torque}}</span>
+               </button> <br> <br>
+
+               horsepower: <button type="button" class="btn btn-primary">
+               <span class="badge text-bg-secondary">{{horsepower}}</span>
+               </button> <br> <br>
+
+                  {{#with transmission}}
+                     <div><em><b>Transmission:</b></em>
+                     <br>
+                     <br>
+                     type: <button type="button" class="btn btn-primary">
+                  <span class="badge text-bg-secondary">{{type}}</span>
+                  </button> <br> <br>
+
+                  gears: <button type="button" class="btn btn-primary">
+                  <span class="badge text-bg-secondary">{{gears}}</span>
+                  </button> <br> <br>
+                     </div>
+                  <hr>
+                  <br>
+                  {{/with}}
+
+          {{/with}}
+
+
+          <div><em><b>Price</b></em></div>
+         <hr>
+          <br>
+           {{#with price}}
+          
+            base: <button type="button" class="btn btn-primary">
+            <span class="badge text-bg-secondary">{{base}}</span>
+            </button> <br> <br>
+
+            destination: <button type="button" class="btn btn-primary">
+            <span class="badge text-bg-secondary">{{destination}}</span>
+            </button> <br> <br>
+
+         
+               {{#with options}}
+                  <div><em><b>Options:</b></em>
+                  <br>
+                  <br>
+               navigation: <button type="button" class="btn btn-primary">
+               <span class="badge text-bg-secondary">{{navigation}}</span>
+               </button> <br> <br>
+
+               moonroof: <button type="button" class="btn btn-primary">
+               <span class="badge text-bg-secondary">{{moonroof}}</span>
+               </button> <br> <br>
+
+               premium_paint: <button type="button" class="btn btn-primary">
+               <span class="badge text-bg-secondary">{{premium_paint}}</span>
+               </button> <br> <br>
+                  </div>
+               <br>
+               {{/with}}
+          
+          
+            <div> total  <button type="button" class="btn btn-primary">{{total}}</button></div>
+          {{/with}}
+
+      
+
+          <br>
+          <br>
+   </section>
+</div>
