@@ -1,0 +1,222 @@
+<div>
+   <section>
+      <div><strong><u>{{name}}</u></strong> ({{price}}$)</div>
+      <br>
+      <p>{{description}}</p>
+      
+      <br>
+      <hr>
+
+      <div><strong><em>{{category}}</em></strong></div>
+      <br>
+      <hr>
+     
+         
+         {{#with features.processor}}
+         <div><strong><u>Processor:</u></strong>
+         <br>
+         <br>
+         
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+             <button type="button" class="btn btn-primary">
+                 brand <span class="badge text-bg-secondary">{{brand}}</span>
+               </button>
+            <button type="button" class="btn btn-primary">
+                 model <span class="badge text-bg-secondary">{{model}}</span>
+               </button>
+            <button type="button" class="btn btn-primary">
+                  speed <span class="badge text-bg-secondary">{{speed}}</span>
+               </button>
+            <button type="button" class="btn btn-primary">
+                 cores <span class="badge text-bg-secondary">{{cores}}</span>
+               </button>   
+             <button type="button" class="btn btn-primary">
+                cache <span class="badge text-bg-secondary">{{cache}}</span>
+               </button>  
+            </div></div>
+         {{/with}}
+         <br>
+         
+         {{#with features.memory}}
+         <div><strong><u>Memory:</u></strong></div>
+         <br>
+         
+            <div class="d-grid gap-4 d-md-flex justify-content-md-center">
+            <button type="button" class="btn btn-primary">
+             type <span class="badge text-bg-success">{{type}}</span>
+            </button>
+            <button type="button" class="btn btn-primary">
+             size <span class="badge text-bg-success">{{size}}</span>
+            </button>
+             <button type="button" class="btn btn-primary">
+             speed <span class="badge text-bg-success">{{speed}}</span>
+            </button>
+                 
+            </div>
+         {{/with}}
+         <br>
+
+         {{#with features.storage}}
+         <div><strong><u>Storage:</u></strong></div>
+         <br>
+         
+            <div class="d-grid gap-4 d-md-flex justify-content-md-center">
+            <button type="button" class="btn btn-primary">
+             type <span class="badge text-bg-warning">{{type}}</span>
+            </button>
+            <button type="button" class="btn btn-primary">
+             size <span class="badge text-bg-warning">{{size}}</span>
+            </button>
+                 
+            </div>
+         {{/with}}
+         <br>
+
+          {{#with features.display}}
+         <div><strong><u>Display:</u></strong>
+         <br>
+         <br>
+         
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+             <button type="button" class="btn btn-primary">
+               size <span class="badge text-bg-danger">{{size}}</span>
+               </button>
+            <button type="button" class="btn btn-primary">
+                resolution <span class="badge text-bg-danger">{{resolution}}</span>
+               </button>
+            <button type="button" class="btn btn-primary">
+                technology <span class="badge text-bg-danger">{{technology}}</span>
+               </button>
+            <button type="button" class="btn btn-primary">
+                 color_space <span class="badge text-bg-danger">{{color_space}}</span>
+               </button>   
+             <button type="button" class="btn btn-primary">
+                brightness <span class="badge text-bg-danger">{{brightness}}</span>
+               </button> 
+            <button type="button" class="btn btn-primary">
+                refresh_rate <span class="badge text-bg-danger">{{refresh_rate}}</span>
+               </button> 
+            </div></div>
+         {{/with}}
+         <br>
+         
+          {{#with features.graphics}}
+         <div><strong><u>Graphics:</u></strong></div>
+         <br>
+         
+            <div class="d-grid gap-4 d-md-flex justify-content-md-center">
+            <button type="button" class="btn btn-primary">
+             brand <span class="badge text-bg-success">{{brand}}</span>
+            </button>
+            <button type="button" class="btn btn-primary">
+              model <span class="badge text-bg-success">{{model}}</span>
+            </button>
+             <button type="button" class="btn btn-primary">
+            memory <span class="badge text-bg-success">{{memory}}</span>
+            </button>
+                 
+            </div>
+         {{/with}}
+         <br>
+
+          <div><strong><u>Ports:</u></strong></div>
+         <br>
+
+         <ul>
+         {{#each features.ports}}
+           <li>
+            
+            <button type="button" class="btn btn-primary">
+              type <span class="badge text-bg-secondary">{{type}}</span>
+            </button>
+            <button type="button" class="btn btn-primary">
+              count <span class="badge text-bg-secondary">{{count}}</span>
+            </button></li>
+            <br>
+             
+           
+                <div><strong><em>Features:</em></strong></div>
+                <br>
+
+                {{#if features}}
+                {{#each features}}
+                <div>
+                 <button type="button" class="btn btn-primary">
+                   <span class="badge text-bg-danger">{{this}}</span>
+                 </button></div><br>
+                {{/each}}
+                {{else}}
+                <p class="empty">No content</p>
+                {{/if}}
+                <br>
+                <br>
+         {{/each}}
+         </ul>
+
+         {{#with features.battery}}
+         <div><strong><u> Battery:</u></strong></div>
+         <br>
+         
+            <div class="d-grid gap-4 d-md-flex justify-content-md-center">
+            <button type="button" class="btn btn-primary">
+             type <span class="badge text-bg-success">{{type}}</span>
+            </button>
+            <button type="button" class="btn btn-primary">
+              capacity <span class="badge text-bg-success">{{capacity}}</span>
+            </button>
+             <button type="button" class="btn btn-primary">
+            life <span class="badge text-bg-success">{{life}}</span>
+            </button>
+                 
+            </div>
+         {{/with}}
+         <br>
+         
+           <div><strong><u> Weight:</u></strong>
+         <br>
+         <br>
+          <button type="button" class="btn btn-primary">{{features.weight}}</button>
+         </div>
+         <br>
+
+          {{#with features.dimensions}}
+         <div><strong><u>Dimensions:</u></strong></div>
+         <br>
+         
+            <div class="d-grid gap-4 d-md-flex justify-content-md-center">
+            <button type="button" class="btn btn-primary">
+            height <span class="badge text-bg-success">{{height}}</span>
+            </button>
+            <button type="button" class="btn btn-primary">
+             width <span class="badge text-bg-success">{{width}}</span>
+            </button>
+             <button type="button" class="btn btn-primary">
+            depth <span class="badge text-bg-success">{{depth}}</span>
+            </button>
+                 
+            </div>
+         {{/with}}
+         <br>
+
+         <div><strong><u> Operating_system:</u></strong>
+         <br>
+         <br>
+          <button type="button" class="btn btn-primary">{{features.operating_system}}</button>
+         </div>
+         <br>
+
+         <div><strong><u>Accessories:</u></strong></div>
+         <br>
+      <ul>
+      {{#each features.accessories}}
+      <li>{{name}}</li>
+      <button type="button" class="btn btn-primary">{{price}}$</button><br><br>
+      {{/each}}
+      </ul>
+      <br>
+      <hr>
+
+
+      
+   </section>
+</div>
