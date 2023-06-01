@@ -1,0 +1,87 @@
+<div>
+   <section>
+      <h1>{{name}}</h1>
+      <p><em></em>/Social network/</em></p>
+      <br>
+      <hr>
+
+      
+      {{#each users}}
+      <hr>
+      <div><h2><u>Users:</u></h2></div>
+      <br>
+      <br>
+       <div><em>{{id}}.  {{name}}, </em>{{age}} ({{gender}})</div>
+       <br>
+ 
+
+        
+
+         {{#each friends}}
+         <div><h3><u>All friends:</u></h3></div>
+         <br>
+         <div><em>{{id}}. {{name}},</em> {{age}} ({{gender}})</div>
+         <br>
+
+            <div><strong><em>Mutual friends:</em></strong></div>
+             <br>
+             
+            {{#each mutual_friends}}
+              <div><em>{{id}}. {{name}},</em> {{age}} ({{gender}})
+              
+                 {{#each mutual_friends}}
+                   <div><em><b>Mutual friends:</b></em></div>
+                   <br>
+                   <div><em>{{id}}. {{name}},</em> {{age}} ({{gender}})</div>
+                 {{/each}}
+                 </div>
+                 <br>
+            {{/each}}
+
+             {{#each groups}}
+                 <div><h3><u>Groups:</u></h3></div>
+                 <br>
+                 <br>
+                 <div><b><em>{{id}}.  {{name}} </b></em><p>/{{description}}/</p></div>
+                 <br>
+                 <br>
+                   {{#each members}}
+                   <div><strong><em>Members:</em></strong></div>
+                   <div><em>{{id}}. {{name}},</em> {{age}} ({{gender}})</div>
+                   {{/each}}
+                   <br>
+                   <br>
+            {{/each}}
+         {{/each}}
+         <br>
+         <hr> 
+            
+            {{#each groups}} 
+          <div><h3><u>Groups:</u></h3></div> 
+          <br>
+          
+          <div><b><em>{{id}}.  {{name}} </b></em><p>/{{description}}/</p></div>
+           <br>
+           <br>
+             {{#each members}}
+              <div><strong><em>Members:</em></strong></div>
+              <div><em>{{id}}. {{name}},</em> {{age}} ({{gender}})</div>
+              <br>
+             {{/each}}
+             <br>
+             <br>
+
+           {{/each}}
+ 
+        
+                
+        
+
+
+         
+   
+
+      {{/each}}
+      <hr>
+   </section>
+</div>
