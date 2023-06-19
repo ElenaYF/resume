@@ -1,4 +1,4 @@
-<main>
+<div>
   <section class="col-12 g-3">
   {{#with navigation}}
   
@@ -26,21 +26,22 @@
     </div>
     </div>
    
-  {{/with}}
+  {{/with}}   
    <br>
    <hr class="border border-warning border-2 opacity-50">
 
 
 
 
-  <div class="row col-12 g-3">
-  {{#with city}}
-   <div class="row col-12 g-3"><h1 class="card-title">{{title}}</h1></div> 
+    <div class="row col-12 g-3">
+    {{#with city}}
+    <div class="row col-12 g-3"><h1 class="card-title">{{title}}</h1></div> 
   
     
-    <div class="row-2 col-12 g-3">
-         {{#each cards}}
-      <div class=" row-2 col-6 g-3">
+         <div  class="row">
+         {{#each cards}} 
+         
+      <div class="col-6">
         <div class="card">
           <br>
           {{#with picture}}
@@ -55,16 +56,18 @@
         {{#with button}}
         <a href="{{href}}"><button target="_blank" class="btn btn-primary">{{text}}</button></a>
         {{/with}}
-      </div>
+        </div>
      
-      </div>
+       </div>
       </div>
 
-      </div>
+       
        {{/each}}
+    </div>
+
        
        <br>
-  </div>     
+     
 
        </div>
        </div>
